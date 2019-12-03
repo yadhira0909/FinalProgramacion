@@ -51,12 +51,13 @@
                             Modulo Informes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" @Html.ActionLink("ver Nominas", "Create", "Nominas")</a>
+                            <a class="dropdown-item" @Html.ActionLink("ver Nominas", "Index", "Nominas")</a>
                             <a class="dropdown-item" @Html.ActionLink("Ver empleados activos", "Index", "Salidas")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Ver empleados inactivos", "Index", "Empleados")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Ver Departamentos", "Create", "Permisos")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Salida de empleados por mes", "Create", "Licencias")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Permisos", "Create", "Vacaciones")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Ver empleados inactivos", "Index", "Salidas")</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" @Html.ActionLink("Ver Departamentos", "Index", "Departamentos")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Salida de empleados por mes", "Index", "Salidas")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Permisos", "Create", "Permisos")</a>
                         </div>
                     </li>
                 </ul>
