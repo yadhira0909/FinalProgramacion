@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cargos">
           <Key>
             <PropertyRef Name="Id" />
@@ -59,7 +59,7 @@
           <Key>
             <PropertyRef Name="empleado" />
           </Key>
-          <Property Name="empleado" Type="int" Nullable="false" />
+          <Property Name="empleado" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="desde" Type="nchar" MaxLength="10" />
           <Property Name="hasta" Type="nchar" MaxLength="10" />
           <Property Name="comentarios" Type="nchar" MaxLength="100" />
@@ -77,7 +77,7 @@
           <Key>
             <PropertyRef Name="empleado" />
           </Key>
-          <Property Name="empleado" Type="int" Nullable="false" />
+          <Property Name="empleado" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="desde" Type="nchar" MaxLength="10" />
           <Property Name="hasta" Type="nchar" MaxLength="10" />
           <Property Name="correspondiente" Type="nchar" MaxLength="10" />
@@ -93,8 +93,7 @@
           <EntitySet Name="Salida" EntityType="Self.Salida" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vacaciones" EntityType="Self.Vacaciones" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -152,7 +151,7 @@
           <Key>
             <PropertyRef Name="empleado" />
           </Key>
-          <Property Name="empleado" Type="Int32" Nullable="false" />
+          <Property Name="empleado" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
           <Property Name="desde" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="hasta" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="comentarios" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
@@ -170,7 +169,7 @@
           <Key>
             <PropertyRef Name="empleado" />
           </Key>
-          <Property Name="empleado" Type="Int32" Nullable="false" />
+          <Property Name="empleado" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
           <Property Name="desde" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="hasta" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="correspondiente" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />

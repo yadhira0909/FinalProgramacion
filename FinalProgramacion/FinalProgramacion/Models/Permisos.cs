@@ -14,7 +14,7 @@ namespace FinalProgramacion.Models
     
     public partial class Permisos
     {
-        public int empleado { get; set; }
+        public string empleado { get; set; }
         public string desde { get; set; }
         public string hasta { get; set; }
         public string comentarios { get; set; }
