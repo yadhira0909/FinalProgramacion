@@ -39,20 +39,24 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" @Html.ActionLink("Calcular Nomina", "Create", "Nominas")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Agregar Cargo", "Create", "Cargos")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Inactivar Empleado", "Create", "Salidas")</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" @Html.ActionLink("Agregar Departamento", "Create", "Departamentos")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Registrar Vacaciones", "Create", "Vacaciones")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Registrar Permiso", "Create", "Permisos")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Registrar Licencias", "Create", "Licencias")</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                            Modulo Informes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" @Html.ActionLink("ver Nominas", "Create", "Nominas")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Ver empleados activos", "Create", "Salidas")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Ver empleados inactivos", "Create", "Vacaciones")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Ver Departamentos", "Create", "Permisos")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Salida de empleados por mes", "Create", "Licencias")</a>
+                            <a class="dropdown-item" @Html.ActionLink("Permisos", "Create", "Vacaciones")</a>
                         </div>
                     </li>
                 </ul>
