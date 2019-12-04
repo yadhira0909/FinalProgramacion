@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cargos">
           <Key>
             <PropertyRef Name="Id" />
@@ -72,6 +72,7 @@
           <Property Name="tipo Salida" Type="nchar" MaxLength="30" />
           <Property Name="motivo" Type="nchar" MaxLength="100" />
           <Property Name="comentario" Type="nchar" MaxLength="100" />
+          <Property Name="fecha_salida" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Vacaciones">
           <Key>
@@ -93,8 +94,7 @@
           <EntitySet Name="Salida" EntityType="Self.Salida" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Vacaciones" EntityType="Self.Vacaciones" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -165,6 +165,7 @@
           <Property Name="tipo_Salida" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
           <Property Name="motivo" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="comentario" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="fecha_salida" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Vacaciones">
           <Key>
@@ -260,6 +261,7 @@
           <EntitySetMapping Name="Salida">
             <EntityTypeMapping TypeName="FPModel.Salida">
               <MappingFragment StoreEntitySet="Salida">
+                <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
                 <ScalarProperty Name="empleado" ColumnName="empleado" />
                 <ScalarProperty Name="tipo_Salida" ColumnName="tipo Salida" />
                 <ScalarProperty Name="motivo" ColumnName="motivo" />

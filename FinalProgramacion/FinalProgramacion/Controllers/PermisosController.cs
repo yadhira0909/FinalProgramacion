@@ -20,6 +20,14 @@ namespace FinalProgramacion.Controllers
             return View(db.Permisos.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Index(string busqueda)
+        {
+            var bus = from i in db.Permisos where i.empleado.Contains(busqueda) select i;
+            return View(bus);
+        }
+
+
         // GET: Permisos/Details/5
         public ActionResult Details(string id)
         {

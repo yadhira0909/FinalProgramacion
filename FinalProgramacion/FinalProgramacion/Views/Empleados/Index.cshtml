@@ -36,6 +36,8 @@
             </th>
             <th></th>
         </tr>
+    </th>
+        </tr>
 
         @foreach (var item in Model)
         {
@@ -66,9 +68,11 @@
                     @Html.DisplayFor(modelItem => item.estado_activo_inactivo_)
                 </td>
                 <td>
+
                     @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+
                     @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }) |
                 </td>
             </tr>
         }
