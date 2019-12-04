@@ -18,5 +18,6 @@ namespace FinalProgramacion.Models
         public string tipo_Salida { get; set; }
         public string motivo { get; set; }
         public string comentario { get; set; }
+        public string fecha_salida { get; set; }
     }
 }
