@@ -24,7 +24,7 @@ namespace FinalProgramacion.Controllers
         public ActionResult Index(string busqueda)
         {
             var bus = from a in db.Empleados where a.ingreso.Contains(busqueda) select a;
-            return View(db.Empleados.ToList());
+            return View(bus);
         }
 
         // GET: Empleados/Details/5

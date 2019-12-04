@@ -6,7 +6,14 @@
     @Html.ActionLink("Crear", "Create")
 </p>
 <table class="table">
+    <form method="post">
+        <input type="search" name="busqueda" /><button type="submit">Buscar</button>
+
+    </form>
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.empleado)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.tipo_Salida)
         </th>
@@ -24,25 +31,29 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.tipo_Salida)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.motivo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.comentario)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fecha_salida)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.empleado }) |
-                @Html.ActionLink("Detalles", "Details", new { id = item.empleado }) |
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.empleado })
-            </td>
-        </tr>
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.empleado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tipo_Salida)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.motivo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.comentario)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fecha_salida)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.empleado }) |
+        @Html.ActionLink("Detalles", "Details", new { id = item.empleado }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.empleado })
+    </td>
+</tr>
     }
 
 </table>

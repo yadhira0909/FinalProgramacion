@@ -38,6 +38,8 @@ namespace FinalProgramacion.Controllers
         // GET: Nominas/Create
         public ActionResult Create()
         {
+            var sue = from x in db.Empleados select x;
+            ViewBag.Index = sue.Sum(a => a.salario);
             return View();
         }
 

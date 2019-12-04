@@ -7,36 +7,50 @@
     @Html.ActionLink("Crear", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.desde)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.hasta)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.comentarios)
-        </th>
-        <th></th>
-    </tr>
+       <form method="post">
+        <input type="search" name="busqueda" /><button type="submit">Buscar</button>
+
+    </form>
+       <tr>
+           <th>
+               @Html.DisplayNameFor(model => model.empleado)
+           </th>
+           <th>
+               @Html.DisplayNameFor(model => model.desde)
+           </th>
+           <th>
+               @Html.DisplayNameFor(model => model.hasta)
+           </th>
+           <th>
+               @Html.DisplayNameFor(model => model.comentarios)
+           </th>
+           <th></th>
+       </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.desde)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.hasta)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.comentarios)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.empleado }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.empleado }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.empleado })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.empleado)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.desde)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.hasta)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.comentarios)
+    </td>
+    <td>
+    <td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.empleado }) |
+        @Html.ActionLink("Detalles", "Details", new { id = item.empleado }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.empleado })
+    </td>
+    </td>
+    </td>
+</tr>
 }
 
 </table>
