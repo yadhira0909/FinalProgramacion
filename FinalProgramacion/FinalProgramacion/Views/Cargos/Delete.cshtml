@@ -1,29 +1,33 @@
 ﻿@model FinalProgramacion.App_Start.Models.Cargos
 
 
+<link href="~/Content/estilo.css" rel="stylesheet" type="text/css" />
+<h1 id="Ccrear">Eliminar</h1>
 
-<h1>Eliminar</h1>
+<h3 id="eli">Seguro que desea eliminar este cargo?</h3>
 
-<h3>Seguro que desea eliminar este cargo?</h3>
-<div>
-    
+
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Cargo)
-        </dt>
+        <center id="ce">
+            <dt>
+                @Html.DisplayNameFor(model => model.Cargo)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cargo)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Cargo)
+            </dd>
+        </center>
+        <br />
 
-    </dl>
+</dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            <input type="submit" value="Eliminar" class="btn btn-default" id="boton1" /> |
             @Html.ActionLink("Ir a la lista", "Index")
         </div>
     }

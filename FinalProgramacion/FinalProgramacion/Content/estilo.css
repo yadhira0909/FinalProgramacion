@@ -1,0 +1,87 @@
+﻿body {
+ 
+}
+.table{
+    border-color:red;
+}
+#Ccrear {
+    font-family: 'Clarendon Blk BT';
+        text-align:center;
+        margin-top:100px;
+    font-size: 50px;
+    color:black;
+    text-shadow:unset;
+ 
+}
+#cc{
+    font-family: 'Clarendon Blk BT';
+    
+
+    font-size: 50px;
+    color: black;
+  
+}
+#form{
+    text-align:center;
+ 
+}
+.eti {
+    color: black;
+    background-color:darkgray;
+    border-color:black;
+    padding: 20px;
+    margin-bottom:20px;
+ 
+    border-radius: 10px;
+    font-family: 'Cambria Math';
+    margin-left: 410px;
+    float: left
+}
+#boton{
+    margin-left:-205px;
+    background-color:dodgerblue;
+    border-color:black;
+}
+#boton1{
+    margin-left: 500px;
+    background-color: dodgerblue;
+    border-color: black;
+}
+
+#boton2 {
+    margin-left: 332px;
+    background-color: dodgerblue;
+    border-color: black;
+}
+
+#eli{
+    text-align:center;
+}
+#ce {
+    color: black;
+    font-family:'Cambria Math';
+    margin-left: 370px;
+    float: left;
+}
+#ce1 {
+    color: black;
+    font-family: 'Clarendon Blk BT';
+    font-size:18px;
+    float: left;
+}
+
+#bot {
+    color: black;
+    margin-left:500px;
+    text-align:right;
+    
+    
+}
+#cen{
+    float:left;
+    margin-left:550px;
+}
+#cent {
+    float: left;
+    margin-left: 500px;
+}
