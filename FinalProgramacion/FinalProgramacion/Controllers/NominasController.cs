@@ -38,11 +38,14 @@ namespace FinalProgramacion.Controllers
         // GET: Nominas/Create
         public ActionResult Create()
         {
-            var sue = from x in db.Empleados select x;
-            ViewBag.Index = sue.Sum(a => a.salario);
-            return View();
-        }
 
+           
+                var sue = from x in db.Empleados select x;
+            ViewBag.m = sue.Sum(a => a.salario);
+                return View();
+
+        }
+    
         // POST: Nominas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
