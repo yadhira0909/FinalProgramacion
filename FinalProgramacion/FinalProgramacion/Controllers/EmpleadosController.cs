@@ -20,6 +20,13 @@ namespace FinalProgramacion.Controllers
             return View(db.Empleados.ToList());
         }
 
+        [HttpPost]
+        public ActionResult Index(string busqueda)
+        {
+            var bus = from a in db.Empleados where a.ingreso.Contains(busqueda) select a;
+            return View(db.Empleados.ToList());
+        }
+
         // GET: Empleados/Details/5
         public ActionResult Details(int? id)
         {
