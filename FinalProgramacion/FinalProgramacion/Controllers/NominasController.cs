@@ -41,6 +41,9 @@ namespace FinalProgramacion.Controllers
         public ActionResult Create()
         {
            
+            var sueldo = from x in db.Empleados select x;
+            ViewBag.Index = sueldo.sum(z => z.salario);
+
 
             return View();
         }
