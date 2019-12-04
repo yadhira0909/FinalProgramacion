@@ -20,6 +20,8 @@ namespace FinalProgramacion.Controllers
             return View(db.Nomina.ToList());
         }
 
+
+
         // GET: Nominas/Details/5
         public ActionResult Details(int? id)
         {
@@ -38,6 +40,8 @@ namespace FinalProgramacion.Controllers
         // GET: Nominas/Create
         public ActionResult Create()
         {
+           
+
             return View();
         }
 

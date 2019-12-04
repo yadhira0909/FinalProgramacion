@@ -19,6 +19,8 @@ namespace FinalProgramacion.Controllers
         {
             return View(db.Empleados.ToList());
         }
+
+       
         [HttpPost]
         public ActionResult Index(string estado_activo_inactivo_)
         {
@@ -44,8 +46,14 @@ namespace FinalProgramacion.Controllers
         // GET: Empleados/Create
         public ActionResult Create()
         {
+           
             return View();
         }
+
+      
+            
+
+     
 
         // POST: Empleados/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 

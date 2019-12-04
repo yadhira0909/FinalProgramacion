@@ -52,12 +52,16 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" @Html.ActionLink("ver Nominas", "Index", "Nominas")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Ver empleados activos", "Index", "Salidas")</a>
-                            <a class="dropdown-item" @Html.ActionLink("Ver empleados inactivos", "Index", "Salidas")</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" @Html.ActionLink("Ver estado de empleados", "Index", "Empleados")</a>
+
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" @Html.ActionLink("Ver Departamentos", "Index", "Departamentos")</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" @Html.ActionLink("Salida de empleados por mes", "Index", "Salidas")</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" @Html.ActionLink("Ver Cargos", "Index", "Cargos")</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" @Html.ActionLink("Ver Permisos", "Index", "Permisos")</a>
                         </div>
                     </li>
