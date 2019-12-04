@@ -1,13 +1,10 @@
 ﻿@model IEnumerable<FinalProgramacion.App_Start.Models.Permisos>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
+<h2>Lista</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear", "Create")
 </p>
 <table class="table">
     <tr>
@@ -35,9 +32,9 @@
             @Html.DisplayFor(modelItem => item.comentarios)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.empleado }) |
-            @Html.ActionLink("Details", "Details", new { id=item.empleado }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.empleado })
+            @Html.ActionLink("Editar", "Edit", new { id=item.empleado }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.empleado }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.empleado })
         </td>
     </tr>
 }

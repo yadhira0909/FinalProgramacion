@@ -1,13 +1,9 @@
 ﻿@model IEnumerable<FinalProgramacion.App_Start.Models.Salida>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
+<h1>Lista</h1>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear", "Create")
 </p>
 <table class="table">
     <tr>
@@ -26,26 +22,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.tipo_Salida)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.motivo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.comentario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fecha_salida)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.empleado }) |
-            @Html.ActionLink("Details", "Details", new { id=item.empleado }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.empleado })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo_Salida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.motivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comentario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha_salida)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.empleado }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.empleado }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.empleado })
+            </td>
+        </tr>
+    }
 
 </table>
