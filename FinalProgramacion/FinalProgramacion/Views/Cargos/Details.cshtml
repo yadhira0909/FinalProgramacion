@@ -1,7 +1,10 @@
-﻿@model FinalProgramacion.Models.Cargos
+﻿@model FinalProgramacion.App_Start.Models.Cargos
 
+@{
+    ViewBag.Title = "Details";
+}
 
-<h2>Detalles</h2>
+<h2>Details</h2>
 
 <div>
     <h4>Cargos</h4>
@@ -18,6 +21,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Ir a la listas", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>
