@@ -15,7 +15,7 @@
         <input name="estado_activo_inactivo_" type="search" /><button type="submit">Buscar</button>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.codigo)
+               < @Html.DisplayNameFor(model => model.codigo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.nombre)
@@ -32,7 +32,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.cargo)
             </th>
-        
+            <th>
+                @Html.DisplayNameFor(model => model.ingreso)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.sueldo)
             </th>

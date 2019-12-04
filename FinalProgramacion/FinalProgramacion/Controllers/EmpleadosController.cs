@@ -19,16 +19,11 @@ namespace FinalProgramacion.Controllers
         {
             return View(db.Empleados.ToList());
         }
-
+        [HttpPost]
         public ActionResult Index(string estado_activo_inactivo_)
         {
-
-      
-                var Estado = from a in db.Empleados where a.nombre.Contains(estado_activo_inactivo_) || a.departamento.Contains(estado_activo_inactivo_) select a;
-                return View(estado_activo_inactivo_);
-          
-                
-          
+            var Estado = from a in db.Empleados where a.nombre.Contains(estado_activo_inactivo_) || a.departamento.Contains(estado_activo_inactivo_) select a;
+            return View(Estado);
         }
 
             // GET: Empleados/Details/5
