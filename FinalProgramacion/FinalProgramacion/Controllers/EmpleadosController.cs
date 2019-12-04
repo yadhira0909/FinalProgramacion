@@ -22,8 +22,13 @@ namespace FinalProgramacion.Controllers
 
         public ActionResult Index(string estado_activo_inactivo_)
         {
-            var Estado = from a in db.Empleados where a.nombre.Contains(estado_activo_inactivo_) || a.departamento.Contains(estado_activo_inactivo_) select a;
-            return View(estado_activo_inactivo_);
+
+      
+                var Estado = from a in db.Empleados where a.nombre.Contains(estado_activo_inactivo_) || a.departamento.Contains(estado_activo_inactivo_) select a;
+                return View(estado_activo_inactivo_);
+          
+                
+          
         }
 
             // GET: Empleados/Details/5
